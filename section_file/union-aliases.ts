@@ -6,7 +6,8 @@ function combine(input1: Combinable, input2: Combinable, resultConbersion: Conve
 	let result;
 	if((typeof input1 === 'number')&&(typeof input2 === 'number')|| resultConbersion === 'as-number') {
 		result = +input1 + +input2;
-		return parseFloat(result);
+		// return parseFloat(result);
+		return +result;
 	} else {
 		result = input1.toString() + input2.toString();
 	}

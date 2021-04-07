@@ -1,0 +1,11 @@
+■ 初期ファイル作成
+> tsc --init
+
+■ 監視モード
+> tsc --watch
+
+■ lite-server 起動
+> npm lite-server
+
+■ ファイルのコンパイル
+> tsc ファイル名

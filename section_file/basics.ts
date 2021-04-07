@@ -1,4 +1,4 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
+function addFunction(n1: number, n2: number, showResult: boolean, phrase: string) {
 	// if(typeof n1 !== 'number' || typeof n2 !=='number') {
 	// 	throw new Error('入力値の型が正しくありません');
 	// }
@@ -16,5 +16,5 @@ const number2 = 2.8;
 const printResult = true;
 const resultPhrase = 'Result: ';
 
-add(number1, number2, printResult, resultPhrase);
+addFunction(number1, number2, printResult, resultPhrase);
 

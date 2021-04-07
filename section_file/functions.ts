@@ -4,11 +4,11 @@ function add(n1: number, n2: number) {
 
 // printResult は console.log するだけなので、なにも return しないので受け取る型は undefind だが、
 // なにも返さないということを明示的にしめすため、返す型は void とする
-function printResult(num: number): void {
+function printResultCalc(num: number): void {
 	console.log(`result: ${num}`);
 }
 
-printResult(add(5,12));
+printResultCalc(add(5,12));
 // >> result: 17
 
 

@@ -1,7 +1,7 @@
 let userInput: unknown;
 let userName: string;
 
-userInput = 5;
+// userInput = 5;
 userInput = 'max';
 
 // userName = userInput;
@@ -13,7 +13,7 @@ if (typeof userInput === 'string') {
 	userName = userInput;
 }
 
-console.log(userName);
+// console.log(userName);
 
 
 

@@ -10,7 +10,7 @@ type Universal = Combinable & Numeric & ScriptString ;
 // オブジェクト型の場合複数の型を結合する
 type Admin = {
 	name: string;
-	priveleges: string[];
+	privileges: string[];
 }
 
 type Employee = {
@@ -28,13 +28,13 @@ type ElevatedEmployee = Admin & Employee & Skill;
 
 const e1: ElevatedEmployee = {
 	name: "Alice",
-	priveleges: ['create-server'],
+	privileges: ['create-server'],
 	startDate: new Date(),
 	skill: ['jump'],
 }
 
 console.log(e1);
-// >>{"name": "Alice", "priveleges": [ "create-server" ], "startDate": "2021-04-09T03:48:29.064Z", "skill": [ "jump" ] }
+// >>{"name": "Alice", "privileges": [ "create-server" ], "startDate": "2021-04-09T03:48:29.064Z", "skill": [ "jump" ] }
 
 
 
@@ -43,7 +43,7 @@ console.log(e1);
 /*
 interface Admin = {
 	name: string;
-	priveleges: string[];
+	privileges: string[];
 }
 
 interface Employee = {

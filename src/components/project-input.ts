@@ -1,7 +1,7 @@
-import { Component } from '../components/base-components.js';
-import { validate, Validatable } from '../util/validation.js'
-import { autobind } from '../decorators/autobind.js';
-import { projectState } from '../state/project-state.js';
+import { Component } from '../components/base-components';
+import { validate, Validatable } from '../util/validation'
+import { autobind } from '../decorators/autobind';
+import { projectState } from '../state/project-state';
 
 
 		// フォームの表示と入力値の取得

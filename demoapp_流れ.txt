@@ -1,0 +1,117 @@
+class [ProjectInput] を作成する
+・フォームの取得・表示と入力値の取得
+・[ProjectInput] でindex.html の <template>とその中の<form>への取得
+・input内容を取得する
+・[ProjectList]にデータを渡す
+・<div id="app"> に<template>の内容を表示する
+
+	constructor 内で
+		・indexhtml から <templete>[project-input] を取得する [templateElement]
+		・indexhtml の <div id=app> に表示するelementを作成する [hostElement]
+
+	[attach] appにnodeを設置するメソッドを作る
+
+		・form に id[user-input] を付与する
+
+	[configure] submitの監視受け取って
+		・イベントリスナーの設定をする
+		・formの要素に イベントリスナーを追加して submit を監視する
+		・デコレーターを使ってみよう(bind)
+
+
+	[submitHandler] 入力項目の監視
+		・Event のオブジェクトを受け取る
+		・入力項目の監視をする
+		・configure から Event を
+
+	[gatherUserInput] 入力に対するバリデーション
+		・[submitHundler] 内で入力値を取得
+		・バリデータの汎用的な関数を作ってみよう
+
+
+	[clearInputs] 入力値をクリアする
+		・submit後に入力をクリアする
+
+
+
+// ---------- ひんと
+as 〇〇〇〇 - 型キャストする
+
+Document.importNode() - 外部からノードを複製する
+
+Element.insertAdjacentElement() - 要素を相対的な位置に挿入する
+
+Event.preventDefault() - 規定の動作をキャンセル
+参考 https://qiita.com/tochiji/items/4e9e64cabc0a1cd7a1ae
+
+Array.isArray - オブジェクトが配列かどうかを調べる
+参考 https://javascript.keicode.com/lang/array-check.php
+
+
+
+
+
+
+
+class [ProjectList] を作成する
+・プロジェクトを表示するclass
+・表示する<template>を取得する
+・[ProjectInput]からデータを取得する
+・<id="app">に表示する
+
+	constructor 内で
+		・index.html から <templete>[project-list] を取得する を取得する [templateElement]
+		・indexhtml の id=app に表示するelementを作成する [hostElement]
+
+	[attach] appにnodeを設置するメソッドを作る
+
+	[render-content] project-list を画面に表示するメソッド
+
+
+
+class [ProjectState] を作成する
+・グローバルでアプリケーションの状態を管理するクラス
+・プロジェクトやその他の状態を管理、各部分の状態の変化によって起きる状態の変化によって起きるイベントリスナーを設定する
+
+	[addProject]入力項目を元にプロジェクトを追加する
+
+
+
+
+
+状態管理classを作成してアプリのイベントリスナーを
+[ProjectState]状態管理class
+イベントリスナーとしての関数のリストを管理する。状態に変化があればリスナー関数が呼び出されるようにする
+
+状態管理の方法
+[projects]プロジェクトの配列
+[listeners]イベントリスナーの配列
+
+[addProject]プロジェクトの追加関数
+[submitHundler]の中で[addproject]を呼び出しプロジェクトを追加する
+	更新されたプロジェクトをプロジェクトのリストに渡す
+[addlistenter]リスナーを追加するための関数
+	配列を管理して状態変化があったとき配列をループして、全てのリスナー関数を呼び出す
+	プロジェクトリストを表示する関数[ProjectList]の中で呼び出して
+	[renderProject]プロジェクトを表示する関数を作成しリスナー関数の中で呼び出す
+
+グローバルのプロジェクトインスタンス（シングルトン）[ProjectState]を作成する
+
+[projects]のプロパティをclassで管理しましょう
+[listeners]のプロパティを関数型の配列で管理しましょう
+
+
+重複した動作の部分、プロパティを共通化しましょう
+リストの詳細をひょうじするようにしましょう
+
+
+
+[ProjectItem]プロジェクトをリストとして表示するclass
+
+
+
+
+
+
+
+drag&dropを実装する
